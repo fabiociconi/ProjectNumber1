@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectNumber1.Views.Device.AddDevicePage">
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label Text="Add New Device" FontAttributes="Bold" FontSize="Large"></Label>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <Label Text="Device Name" />
+                <Entry x:Name="deviceNameEntry" Placeholder="Type the min Temperature" />
+                <Label Text="Min. Temperature" />
+                <Entry x:Name="minTempEntry" Placeholder="Type the max Temperature" />
+                <Label Text="Max. Temperature" />
+                <Entry x:Name="maxTempEntry" />
+                <Label x:Name="messageLabel" />
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand" >
+                <Button Text="Add Device" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

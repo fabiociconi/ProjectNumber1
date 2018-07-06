@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectNumber1.Views.Account.RegisterPage"
+              Title="Sign Up">
+    <ContentPage.Content>
+
+        <StackLayout Padding="0,20,0,0">
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label Text="Registration" FontAttributes="Bold" FontSize="Large"></Label>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <Label Text="Firstname" />
+                <Entry x:Name="userfirstnameEntry" Placeholder="First Name" />
+                <Label Text="Lastname" />
+                <Entry x:Name="userlastnameEntry" Placeholder="Last Name" />
+                <Label Text="Email address" />
+                <Entry x:Name="emailEntry" />
+
+                <Label Text="Password" />
+                <Entry x:Name="passwordEntry" IsPassword="true" />
+                <Label Text="Confirm Password" />
+                <Entry x:Name="confirmpasswordEntry" IsPassword="true" />
+                <Label x:Name="messageLabel" />
+
+               
+
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand" >
+                <Button Text="Sign Up" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
