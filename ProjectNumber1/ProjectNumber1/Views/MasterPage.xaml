@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProjectNumber1"
+             xmlns:pages="clr-namespace:ProjectNumber1.Views.Device"
+             x:Class="ProjectNumber1.Views.MasterPage"
+             Padding="0,0,0,0"
+			 Icon="contacts.png"
+			 Title="Tixalink_test">
+    <StackLayout>
+        <Grid BackgroundColor="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid>
+                <Image Source="bg.jpg" Aspect="AspectFill"/>
+                <StackLayout Padding="0,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Rodrigo Geronimo" TextColor="White" FontSize="Large" />
+                    <Label Text="rodrigogeronimo@outlook.com" TextColor="White" FontSize="Small" />
+                    <Button Text="View Account" BackgroundColor="CadetBlue" TextColor="White"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+        <ListView x:Name="listView" x:FieldModifier="public">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:MasterPageItem}">
+                    <local:MasterPageItem Title="Tixalink" IconSource="contacts.png" TargetType="{x:Type pages:DeviceTabbedPage}" />
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="20,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

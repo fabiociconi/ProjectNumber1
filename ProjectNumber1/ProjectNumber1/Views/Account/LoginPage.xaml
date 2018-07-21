@@ -6,23 +6,18 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Sign Up" />
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-  
+    <ContentPage.Content>  
         <StackLayout Padding="0,20,0,0">
             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Label Text="Login" FontAttributes="Bold" FontSize="Large"></Label>
             </StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
-                <Label Text="Username" />
-                <Entry x:Name="usernameEntry" Placeholder="username" />
-                <Label Text="Password" />
-                <Entry x:Name="passwordEntry" IsPassword="true" />
-                
+                <Label Text="Email" />
+                <Entry x:Name="emailEntry" Placeholder="email" />                
                 <Label x:Name="messageLabel" />
             </StackLayout>
             <StackLayout VerticalOptions="EndAndExpand"  >
-                <Button Text="Login"/>
-
+                <Button Text="Login" Clicked="LoginButton_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

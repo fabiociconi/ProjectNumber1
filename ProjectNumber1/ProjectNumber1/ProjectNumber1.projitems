@@ -19,6 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Account\RegisterUserModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\DeviceModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Example\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\General\MasterPageItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Example\IDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Example\MockDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Example\AboutViewModel.cs" />
@@ -45,8 +46,16 @@
       <DependentUpon>DetailDevicePage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Device\DeviceTabbedPage.xaml.cs">
+      <DependentUpon>DeviceTabbedPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\Device\ListDevicePage.xaml.cs">
       <DependentUpon>ListDevicePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Device\SmartActionsPage.xaml.cs">
+      <DependentUpon>SmartActionsPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\Examples\MainPage.xaml.cs">
@@ -64,6 +73,14 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\Examples\NewItemPage.xaml.cs">
       <DependentUpon>NewItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MasterPage.xaml.cs">
+      <DependentUpon>MasterPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +139,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Consumption\ReportTempPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Device\DeviceTabbedPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MasterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Device\SmartActionsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
