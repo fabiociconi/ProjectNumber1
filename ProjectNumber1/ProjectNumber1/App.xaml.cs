@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ProjectNumber1.Views.Account;
 using ProjectNumber1.Views;
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
@@ -12,8 +13,9 @@ namespace ProjectNumber1
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new Main();
-		}
+            MainPage = new LoginPage();
+            //MainPage = new Main();
+        }
 
 		protected override void OnStart ()
 		{

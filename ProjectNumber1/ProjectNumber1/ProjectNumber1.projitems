@@ -17,7 +17,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Account\LoginModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Account\RegisterUserModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Device\DeviceModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Device\DeviceSource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Example\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\General\MasterPageItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Example\IDataStore.cs" />
@@ -26,6 +26,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Example\ItemDetailViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Example\ItemsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Account\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
       <SubType>Code</SubType>

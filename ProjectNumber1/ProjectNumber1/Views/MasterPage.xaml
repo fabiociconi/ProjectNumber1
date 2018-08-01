@@ -18,7 +18,7 @@
                 <StackLayout Padding="0,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                     <Label Text="Rodrigo Geronimo" TextColor="White" FontSize="Large" />
                     <Label Text="rodrigogeronimo@outlook.com" TextColor="White" FontSize="Small" />
-                    <Button Text="View Account" BackgroundColor="CadetBlue" TextColor="White"/>
+                    <Button Text="View Account" BackgroundColor="CadetBlue" TextColor="White" Clicked="ViewAccountButton_Clicked"/>
                 </StackLayout>
             </Grid>
         </Grid>
@@ -43,5 +43,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <StackLayout Padding="0,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Button Text="Sign Out" BackgroundColor="CadetBlue" TextColor="White" Clicked="ViewAccountButton_Clicked"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>

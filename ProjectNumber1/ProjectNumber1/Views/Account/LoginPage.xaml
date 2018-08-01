@@ -3,22 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectNumber1.Views.Account.LoginPage"
              Title="Login">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Sign Up" />
-    </ContentPage.ToolbarItems>
-    <ContentPage.Content>  
-        <StackLayout Padding="0,20,0,0">
-            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                <Label Text="Login" FontAttributes="Bold" FontSize="Large"></Label>
-            </StackLayout>
-            <StackLayout VerticalOptions="CenterAndExpand">
-                <Label Text="Email" />
-                <Entry x:Name="emailEntry" Placeholder="email" />                
-                <Label x:Name="messageLabel" />
-            </StackLayout>
-            <StackLayout VerticalOptions="EndAndExpand"  >
-                <Button Text="Login" Clicked="LoginButton_Clicked"/>
-            </StackLayout>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Padding="0,120,0,0"  Spacing="40" >            
+            <Image HorizontalOptions="Center" WidthRequest="150" Source="tixalink.png"/>
+            <Frame BackgroundColor="#708FA9" HasShadow="False" WidthRequest="250">
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email"   
+                           PlaceholderColor="White" HeightRequest="40"   
+                           Keyboard="Email"  
+                           TextColor="White"/>                    
+                </StackLayout>
+            </Frame>
+            <Button Command="{Binding SubmitCommand}" Text="Login" TextColor="White"   WidthRequest="250"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#034782" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

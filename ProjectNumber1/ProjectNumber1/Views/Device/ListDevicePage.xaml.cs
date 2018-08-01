@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ProjectNumber1.Models.Device;
 
 namespace ProjectNumber1.Views.Device
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ListDevicePage : ContentPage
 	{
 		public ListDevicePage ()
 		{
 			InitializeComponent ();
-		}
+            DevicesListView.BindingContext = DeviceSource.GetAllDevices();
+        }
 	}
 }

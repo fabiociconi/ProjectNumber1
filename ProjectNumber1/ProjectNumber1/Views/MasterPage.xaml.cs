@@ -1,20 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProjectNumber1.Views.Account;
+using System;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace ProjectNumber1.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+	
 	public partial class MasterPage : ContentPage
 	{
 		public MasterPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+        }
+
+        private void ViewAccountButton_Clicked(object sender, EventArgs e)
+        {
+
+            Application.Current.MainPage = new ProjectNumber1.Views.Account.LoginPage();
+
+        }
+
+        
+
+
+    }
 }

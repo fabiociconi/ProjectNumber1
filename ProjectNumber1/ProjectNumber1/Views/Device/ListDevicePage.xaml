@@ -2,11 +2,42 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectNumber1.Views.Device.ListDevicePage" Title="Devices">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Devices Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid Padding="20" >
+        <ListView  x:Name="DevicesListView" ItemsSource="{Binding}" ListView.HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid RowSpacing="30" ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80" />
+                            </Grid.RowDefinitions>                            
+                            <Label Text="{Binding NameDevice}" FontSize="18"  FontAttributes="Bold"
+										 Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" />
+                            <Label Text="Temp:" FontSize="14"
+										 Grid.Row="0"  Grid.Column="1" VerticalTextAlignment="Center"/>
+                            <Label Text="{Binding CurrentTemp}" FontSize="14"
+										 Grid.Row="0"  Grid.Column="2" VerticalTextAlignment="Center"/>                            
+                            <Label Text="Consumption:" FontSize="14"
+										 Grid.Row="0"  Grid.Column="3" VerticalTextAlignment="Center"/>                           
+                            <Label Text="{Binding Consumption}" FontSize="14"
+										 Grid.Row="0"  Grid.Column="4" VerticalTextAlignment="Center"/>
+                            <Image Source="power.png" Aspect="AspectFit"  HeightRequest="50"  WidthRequest="50" x:Name="Image1" Grid.Row="0" Grid.Column="5"/>
+
+                            
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+
 </ContentPage>

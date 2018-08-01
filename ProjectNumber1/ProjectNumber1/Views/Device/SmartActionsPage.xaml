@@ -2,11 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectNumber1.Views.Device.SmartActionsPage" Title="Smart Actions">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Smart Actions Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid HeightRequest="450" Padding="0,30,0,0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+
+        <Image Source="image1.png" Aspect="AspectFit"  HeightRequest="150"  WidthRequest="200" x:Name="Image1" Grid.Row="0"/>
+        <Image Source="image2.png" Aspect="AspectFit"  HeightRequest="150"  WidthRequest="200" x:Name="Image2" Grid.Row="1"/>
+        <Image Source="image3.png" Aspect="AspectFit"  HeightRequest="150"  WidthRequest="200" x:Name="Image3" Grid.Row="2"/>       
+
+    </Grid>
 </ContentPage>
