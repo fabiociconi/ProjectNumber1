@@ -15,12 +15,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\EmailValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Account\LoginModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Account\RegisterUserModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Account\UserModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Devices\DeviceModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Example\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\General\MasterPageItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ApiServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Example\IDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Example\MockDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Example\AboutViewModel.cs" />
