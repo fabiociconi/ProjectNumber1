@@ -15,6 +15,9 @@ namespace ProjectNumber1.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            // Initializing Acr Dialogs plugin
+            Acr.UserDialogs.UserDialogs.Init(this);
             LoadApplication(new App());
         }
     }
