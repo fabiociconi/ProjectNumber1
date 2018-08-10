@@ -44,7 +44,7 @@
             </ListView.ItemTemplate>
         </ListView>
         <StackLayout Padding="0,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-            <Button Text="Sign Out" BackgroundColor="CadetBlue" TextColor="White" Clicked="ViewAccountButton_Clicked"/>
+            <Button Text="Sign Out" BackgroundColor="CadetBlue" TextColor="White" Clicked="SignOutButton_Clicked"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

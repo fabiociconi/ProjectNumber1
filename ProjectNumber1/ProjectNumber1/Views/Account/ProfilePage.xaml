@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectNumber1.Views.Account.ProfilePage" Title="Account Information" BackgroundImage="bgh.jpg">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Button Clicked="Button_Clicked" Text="Back" TextColor="White"   
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="Start"  VerticalOptions="Start"
+                    BackgroundColor="Transparent"/>
+
+            <Grid>
+                <StackLayout Padding="0,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <BoxView HeightRequest="50"/>
+                    <Label Text="Rodrigo Geronimo" TextColor="White" FontSize="Large" FontAttributes="Bold" />
+                    <Label Text="rodrigogeronimo@outlook.com" TextColor="White" FontSize="Small" FontAttributes="Bold" />
+                    <BoxView HeightRequest="50"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="14" Text="Phone Number:" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" />
+                        <Label Text="(416) 887-4954" HorizontalOptions="FillAndExpand" TextColor="White" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="14" Text="Date of Birth:" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" FontAttributes="Bold"/>
+                        <Label Text="June 07, 1984" HorizontalOptions="FillAndExpand" TextColor="White" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="14" Text="Number of Devices:" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" FontAttributes="Bold"/>
+                        <Label Text="3" HorizontalOptions="FillAndExpand" TextColor="White" FontAttributes="Bold"/>
+                    </StackLayout>
+                </StackLayout>                
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

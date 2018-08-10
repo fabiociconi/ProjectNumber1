@@ -17,7 +17,8 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Account\LoginModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Account\RegisterUserModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Device\DeviceSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Account\UserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Devices\DeviceModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Example\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\General\MasterPageItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Example\IDataStore.cs" />
@@ -29,6 +30,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Account\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Account\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\Account\RegisterPage.xaml.cs">
@@ -164,6 +169,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Device\SmartActionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Account\ProfilePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

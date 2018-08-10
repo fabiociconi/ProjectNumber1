@@ -1,13 +1,11 @@
-﻿using ProjectNumber1.Views.Account;
-using System;
-
+﻿using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using ProjectNumber1.Views.Account;
 
 namespace ProjectNumber1.Views
 {
-	
-	public partial class MasterPage : ContentPage
+
+    public partial class MasterPage : ContentPage
 	{
 		public MasterPage ()
 		{
@@ -16,12 +14,17 @@ namespace ProjectNumber1.Views
 
         private void ViewAccountButton_Clicked(object sender, EventArgs e)
         {
-
-            Application.Current.MainPage = new ProjectNumber1.Views.Account.LoginPage();
-
+             Navigation.PushModalAsync(new ProfilePage());
         }
 
-        
+        private void SignOutButton_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new LoginPage();
+        }
+
+
+
+
 
 
     }

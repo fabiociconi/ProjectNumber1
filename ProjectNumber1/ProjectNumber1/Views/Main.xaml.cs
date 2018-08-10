@@ -9,6 +9,7 @@ namespace ProjectNumber1.Views
         public Main()
         {
             InitializeComponent();
+
             masterPage.listView.ItemSelected += OnItemSelected;
         }
 

@@ -4,6 +4,7 @@ using System.Text;
 using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
+using ProjectNumber1.Views.Account;
 
 namespace ProjectNumber1.ViewModels
 {
@@ -36,6 +37,8 @@ namespace ProjectNumber1.ViewModels
             else
             {
                 Application.Current.MainPage = new ProjectNumber1.Views.Main();
+
+                
 
 
                 //MasterDetailPage fpm = new MasterDetailPage();

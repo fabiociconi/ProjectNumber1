@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using Newtonsoft.Json;
 
-namespace ProjectNumber1.Models.Device
+namespace ProjectNumber1.Models.Devices
 {
-    public class DeviceSource
+    public class DeviceModel
     {
         private static List<Device> _device;
-        static DeviceSource()
+        static DeviceModel()
         {
             // stops for our Food and Fun park tour
             _device = new List<Device>();
@@ -74,15 +77,35 @@ namespace ProjectNumber1.Models.Device
 
     }
 
-    public class Device
+    public class Device : INotifyPropertyChanged
     {
         public int IdDevice { get; set; }
-        public string NameDevice { get; set; }
+
+        private string _name;
+        [JsonProperty("title")]
+        public string NameDevice
+        {
+            get { return _name; }
+            set
+            {
+                _name = value;
+                OnPropertyChanged();
+            }
+
+        }        
+
         public string TypeOfDevice { get; set; }
         public string Consumption { get; set; }
         public string CurrentTemp { get; set; }
         public double MinTemp { get; set; }
         public double MaxTemp { get; set; }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 
 }
