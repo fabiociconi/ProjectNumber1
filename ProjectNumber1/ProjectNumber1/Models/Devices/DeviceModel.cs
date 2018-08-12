@@ -46,7 +46,7 @@ namespace ProjectNumber1.Models.Devices
         public int IdDevice { get; set; }
 
         private string _name;
-        [JsonProperty("title")]
+        [JsonProperty("updatedAt")]
         public string NameDevice
         {
             get { return _name; }
@@ -63,7 +63,7 @@ namespace ProjectNumber1.Models.Devices
 
 
         private int _temperature;
-        [JsonProperty("status")]
+        [JsonProperty("temperature")]
         public int Temperature
         {
             get { return _temperature; }
