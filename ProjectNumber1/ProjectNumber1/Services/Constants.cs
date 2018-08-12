@@ -7,7 +7,7 @@ namespace ProjectNumber1.Services
     public class Constants
     {
         // URL of REST service
-        public static string RestUrl = "address para o Amazon";
+        public static string RestUrl = "Sensors-env.sm5iwiyu65.us-east-2.elasticbeanstalk.com";
 
     }
 }

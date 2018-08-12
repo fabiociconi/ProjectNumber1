@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using ProjectNumber1.Helpers;
 using ProjectNumber1.Models.Account;
 using System;
 using System.Collections.Generic;
@@ -31,14 +32,14 @@ namespace ProjectNumber1.Services
                 if (response.IsSuccessStatusCode)
                 {
                     //guarda na classe settings para ficar guardado
-                    //Settings.AccessToken = responseStr;
+                    Settings.AccessToken = responseStr;
 
                     return true;
                 }
                 else
                 {
                     {
-                        await App.Current.MainPage.DisplayAlert("Invalid", "Login failure", "Try again");
+                        await App.Current.MainPage.DisplayAlert("Invalid", "Login failure", "Try again");                    
                         return false;
                     }
 

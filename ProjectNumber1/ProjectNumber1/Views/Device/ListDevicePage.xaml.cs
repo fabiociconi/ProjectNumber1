@@ -7,15 +7,18 @@ using Xamarin.Forms.Xaml;
 using ProjectNumber1.Models.Devices;
 using System.Net.Http;
 using Newtonsoft.Json;
+using ProjectNumber1.Services;
+using Newtonsoft.Json.Linq;
+using System.Linq;
 
 namespace ProjectNumber1.Views.Device
 {
 	public partial class ListDevicePage : ContentPage
 	{
-        private const string Url = "http://jsonplaceholder.typicode.com/posts";
+        private const int userId = 1;
         private readonly HttpClient _client = new HttpClient();
-        private ObservableCollection<Models.Devices.Device> _devices; 
-
+        private ObservableCollection<Models.Devices.Device> _devices;
+        public string Url;
         public ListDevicePage ()
 		{
             InitializeComponent();
@@ -24,9 +27,19 @@ namespace ProjectNumber1.Views.Device
 
         protected override async void OnAppearing()
         {
+            Url = "http://" + Constants.RestUrl + "/api/getWeatherData?userId=" + userId;
+            //Url = "http://jsonplaceholder.typicode.com/posts?userId=1";
             string content = await _client.GetStringAsync(Url);
-            List<Models.Devices.Device> devices = JsonConvert.DeserializeObject<List<Models.Devices.Device>>(content); 
-            _devices = new ObservableCollection<Models.Devices.Device>(devices);
+
+            List<Models.Devices.Device> devices = (from token in JsonConvert.DeserializeObject<JObject>(content)["payload"].Children() select JsonConvert.DeserializeObject<Models.Devices.Device>(token.ToString())).ToList();
+            foreach (Models.Devices.Device device in devices)
+            {
+                Console.WriteLine(device);
+                Console.ReadLine();
+            }
+            //   List<Models.Devices.Device> devices = JsonConvert.DeserializeObject<List<Models.Devices.Device>>(content);      
+            //  _devices = new ObservableCollection<Models.Devices.Device>(devices);
+
             DevicesListView.ItemsSource = _devices;
             base.OnAppearing();
         }

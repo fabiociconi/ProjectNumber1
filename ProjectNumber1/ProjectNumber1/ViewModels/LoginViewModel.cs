@@ -50,7 +50,8 @@ namespace ProjectNumber1.ViewModels
                 try
                 {
                     IsBusy = true;
-                    await _apiServices.LoginAsync(email);
+                   // await _apiServices.LoginAsync(email);
+                    Application.Current.MainPage = new ProjectNumber1.Views.Main();
                 }
                 catch (Exception ex) when (ex is WebException || ex is HttpRequestException)
                 {
@@ -65,22 +66,14 @@ namespace ProjectNumber1.ViewModels
                     IsBusy = false;
                 }
                 ///retirar isso//
-                if (email != "rodrigogeronimo@outlook.com")
-                {
-                    DisplayInvalidLoginPrompt();
-                }
-                else
-                {
-                    Application.Current.MainPage = new ProjectNumber1.Views.Main();
-
-
-
-
-                    //MasterDetailPage fpm = new MasterDetailPage();
-                    //fpm.Master = new ProjectNumber1.Views.MasterPage();
-                    //fpm.Detail = new NavigationPage(new ProjectNumber1.Views.Device.DeviceTabbedPage());
-                    //Application.Current.MainPage = fpm;
-                }
+                //if (email != "rodrigogeronimo@outlook.com")
+                //{
+                //    DisplayInvalidLoginPrompt();
+                //}
+                //else
+                //{
+                //    Application.Current.MainPage = new ProjectNumber1.Views.Main();
+                //}
             }
 
         }
